@@ -1,0 +1,32 @@
+package com.example.demo.controller;
+
+
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionEvent;
+
+import org.apache.log4j.Logger;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.example.demo.entity.User;
+ 
+  
+  @ControllerAdvice 
+  public class ErrorController 
+  {
+	  private final Logger logger = Logger.getLogger(ErrorController.class);
+  
+	  @ExceptionHandler(Exception.class)
+	  public String handleException(Exception ex,HttpSessionEvent event,HttpSession session) 
+	  {
+		
+		 logger.info("An exception occured in project :"+ex);
+		 User attribute = (User) session.getAttribute("user"); 
+		 session.invalidate();
+	 	 LoginController.activeLoginNames.remove(event.getSession().getValue("loginName"));
+		 return "Error_Page"; 
+		  
+	  }
+  
+  }
+

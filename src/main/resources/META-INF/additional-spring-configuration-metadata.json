@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "app.cert",
+    "type": "java.lang.String",
+    "description": "A description for 'app.cert'"
+  },
+  {
+    "name": "MANDTINPFILES",
+    "type": "java.lang.String",
+    "description": "A description for 'MANDTINPFILES'"
+  }
+]}

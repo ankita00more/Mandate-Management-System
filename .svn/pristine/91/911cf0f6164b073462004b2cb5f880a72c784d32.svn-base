@@ -1,0 +1,176 @@
+spring.mvc.view.prefix=/WEB-INF/views/
+##spring.mvc.view.prefix=/
+spring.mvc.view.suffix=.jsp
+server.port=8021
+spring.jpa.open-in-view=false
+#Production
+#spring.datasource.url=jdbc:oracle:thin:@10.43.1.111:1531:apbsdb
+#spring.datasource.username=apbsh2h
+#spring.datasource.password=apbsh2h_123
+
+#UAT
+spring.datasource.url=jdbc:oracle:thin:@10.43.4.15:1521:infuatdb
+spring.datasource.username=infuat
+spring.datasource.password=infuat_123
+
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.jpa.hibernate.ddl-auto=none
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+#server.servlet.session.timeout= 18000s
+#server.servlet.session.cookie.max-age= 18000s
+spring.application.name=MMS_H2H_SPONSOR
+
+#########################################PROXY IP AND PORT FOR LOCAL#################################################
+#proxyHost = 10.1.24.97
+#proxyPort = 8080
+
+#########################################PROXY IP AND PORT FOR PRODUCTION#############################################
+#proxyHost = 10.43.5.6
+#proxyPort = 3128
+
+#########################################PROXY ip AND PORT FOR DR UAT Application SERVER#################################################
+proxyHost = 10.45.19.6
+proxyPort = 3128
+
+
+
+#######################################MAX_SESSION_TIME#############################################
+app.maxsessiontime = 1800
+
+
+
+
+#server.servlet.context-path=/NACH
+
+#################################################### ACH PROPERTIES####################################################
+app.cert=/cert/
+app.INPToNPCITEMP=/INPToNPCITEMP/
+app.INPUT=/INW_SIGNED/
+app.INPUT_FAIL=/INW_SIGNED_FAIL/
+app.INPUT_ARCH=/INW_SIGNED_ARCH/
+app.Output=/RET_SIGNED/
+app.output_arch=/RET_SIGNED_ARCH/
+app.output_fail=/RET_SIGNED_FAIL/
+app.OutputMap=/MAP_SIGNED/
+app.out_arch_Map=/MAP_SIGNED_ARCH/
+app.out_fail_Map=/MAP_SIGNED_FAIL/
+app.INP=/INP/
+app.RTN=/RET_NPCI/
+app.RTN_ARCH=/RET_NPCI_ARCH/
+app.ToCBS=/TO_CBS_TRICKLEFEED/
+app.ToCBSArchive=/TO_CBS_TRICKLEFEED_ARCH/
+app.FromCBS=/FROM_CBS_TRICKLEFEED_REPORT/
+app.FromCBSArchive=/FROM_CBS_TRICKLEFEED_REPORT_ARCH/
+app.UIDFromCBS=/FROM_CBS_MAPPER/
+app.UIDFromCBSArchive=/FROM_CBS_MAPPER_ARCH/
+app.FailUIDToCBS=/FROM_CBS_MAPPER_FAIL/
+app.MapperToNPCI=/MAPPER_TO_NPCI/
+app.MapperToNPCIArch=/MAPPER_TO_NPCI_ARCH/
+app.INPToNPCI=/INPToNPCI/
+app.INP_To_NPCI_ARCH=/INP_TO_NPCI_ARCH/
+app.SponsorDTL=/SponsorDTL/
+app.SponsorDTLArchive=/SponsorDTLArchive/
+app.SponsorDTLFail=/SponsorDTLFail/
+app.SponsorDTLDup=/SponsorDTLDup/
+app.ack=/ACKNOWLEDGE/
+app.ackArch=/ACKNOWLEDGE_ARCH/
+app.FromNPCI=/INW_NPCI/
+app.FromNPCIArchive=/INW_NPCI_ARCH/
+app.FromNPCIDup=/INW_NPCI_DUP/
+app.ResFromNPCI=/ResFromNPCI/
+app.ResFromNPCIArchive=/ResFromNPCIArchive/
+app.INW_SIGNED=/INW_SIGNED/
+app.RetAck=/RTN_ACK/
+app.RetAckArch=/RTN_ACK_ARCH/
+app.MapAck=/MAP_ACK/
+app.MapAckArch=/MAP_ACK_ARCH/
+app.InpSigned=/INPUT_SIGNED/
+app.InpSignedArch=/INPUT_SIGNED_ARCH/
+app.InpFromOmc=/INP_FROM_OMC/
+app.InpFromOmcArch=/INP_FROM_OMC_ARCH/
+app.ResFromCbs=/RES_FROM_CBS/
+app.ResFromCbsArch=/RES_FROM_CBS_ARCH/
+app.ResToOmc=/RES_TO_OMC/
+app.ResToOmcArch=/RES_TO_OMC_ARCH/
+app.ResSigned=/RES_SIGNED/
+app.ResSignedArch=/RES_SIGNED_ARCH/
+app.InpToCbs=/INP_TO_CBS/
+app.InpToCbsArch=/INP_TO_CBS_ARCH/
+app.InpFromCbs=/INP_FROM_CBS/
+app.InpFromCbsArch=/INP_FROM_CBS_ARCH/
+app.InpToOmc=/INP_TO_OMC/
+app.InpToOmcArch=/INP_TO_OMC_ARCH/
+app.ResFromOmc=/RES_FROM_OMC/
+app.ResFromOmcArch=/RES_FROM_OMC_ARCH/
+app.InputMDT=/INW_MDT_ENCRYPTED/
+app.INPUTMDT_ARCH=/INW_MDT_ENCRYPTED_ARCH/
+app.FromNPCIMDT=/INW_MDT_DECRYPTED_FROM_NPCI/
+app.FromNPCIMDTArchive=/INW_MDT_DECRYPTED_FROM_NPCI_ARCH/
+app.MDTRTN=/RTN_MDT_TO_NPCI/
+app.MDTRTN_ARCH=/RTN_MDT_TO_NPCI_ARCH/
+app.MDTOutput=/RTN_MDT_SIGNED_TO_NPCI/
+app.MDToutput_arch=/RTN_MDT_SIGNED_TO_NPCI_ARCH/
+app.MDTout_fail=/RTN_MDT_SIGNED_TO_NPCI_FAIL/
+app.INP_MDT_SIGNED_TO_NPCI=/INP_MDT_SIGNED_TO_NPCI/
+app.MANDT_INP_FILES=/MANDT_INP_FILES/
+app.MANDTINPFILES=/MANDTINPFILES/
+
+##SECRET KEY
+SecretKey = secretKey
+
+################################################################## VALIDITY PROPERTIES ########################################################
+M037=0
+M057=0
+M007=0
+M024=0
+M034=0
+M094=0
+M006=0
+M021=0
+M060=0
+M096=0
+M009=0
+M051=0
+M054=0
+M038=0
+M036=0
+M011=0
+M012=0
+M067=0
+M013=0
+M015=0
+M014=0
+M026=2
+M055=2
+M008=2
+M074=2
+M075=2
+M080=2
+M035=2
+M079=2
+M084=2
+M082=2
+M077=2
+M085=2
+M083=2
+M078=2
+M081=2
+M050=2
+M049=2
+M052=2
+M030=2
+M025=2
+M023=2
+M032=2
+M066=2
+
+
+
+#destination
+WAR_NAME = /MMS_H2H_DESTINATION_NEW
+NPCI=/home/infapp/Ankita/ACH_MMS/
+MDTINWresToNPCI = /MDTINWresToNPCI/
+INW_MDT_SIGNED_TO_NPCI = /INW_MDT_SIGNED_TO_NPCI/
+
